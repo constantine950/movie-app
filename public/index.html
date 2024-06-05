@@ -11,11 +11,26 @@
         .owl-dots{
             display: none;
         }
+
+        @keyframes transitionIn {
+            from {
+                opacity: 0;
+                transform: rotateX(-10deg);
+            }
+            to {
+                opacity: 1;
+                transform: rotateX(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: transitionIn  0.75s;
+        }
     </style>
     <link rel="stylesheet" href="./output.css">
     <title>Movie Hub</title>
 </head>
-<body class="font-body">
+<body class="font-body animate-fade-in">
     <div class="relative">
         <div class="h-screen bg-no-repeat bg-cover bg-center object-cover md:hidden" style="background-image: url('./img/horbit.jpg');"></div>
         <div class="h-screen hidden bg-center lg:bg-top bg-no-repeat md:block md:bg-cover" style="background-image: url('./img/ozark.jpg');"></div>
